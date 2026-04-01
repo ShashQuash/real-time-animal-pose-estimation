@@ -2,7 +2,7 @@
 
 A collaborative research project on real-time animal pose estimation using YOLO, published at IEEE in 2025.
 
-📄 **Published Paper:** [IEEE Xplore](https://ieeexplore.ieee.org/document/11249593)
+📄 **Published Paper:** [IEEE Xplore](https://ieeexplore.ieee.org/document/11249593) &nbsp;|&nbsp; 📁 **Dataset:** [Google Drive](https://drive.google.com/drive/folders/1DkIQBkmlxgirXiz68SHCVaYJlQ6D62vG?usp=sharing)
 
 ---
 
@@ -10,8 +10,7 @@ A collaborative research project on real-time animal pose estimation using YOLO,
 
 Md Roman Bhuiyan · Barbaros Yesilova · Anastasia Shadakh · **Shrish Arunesh** · Giulio Napolitano · Md Baharul Islam · Junaidi Abdullah
 
-Berlin School of Business and Innovation (BSBI), Berlin, Germany  
-In collaboration with Multimedia University (MMU), Malaysia
+Berlin School of Business and Innovation (BSBI), Berlin, Germany — in collaboration with Multimedia University (MMU), Malaysia
 
 ---
 
@@ -29,21 +28,54 @@ The system detects body keypoints across four animal classes in real time using 
 |------|-----------|
 | Data Collection | Sourced dog images and videos from public domain sources |
 | Annotation | Labelled keypoints in CVAT with a custom dog skeleton structure |
-| Training | Fine-tuned YOLO on the annotated dataset using Google Colab |
+| Training | Fine-tuned YOLO on the annotated dataset using Google Colab (150 epochs) |
 | Testing | Validated the model on both dog images and video footage |
 
 ---
 
-## 📊 Results — Dog Class
+## 📊 Results
 
 | Metric | Score |
 |--------|-------|
 | PoseF1 | 57.8% |
-| PoseP (Precision) | 63.2% |
-| PosePR mAP@0.5 | 99.5% |
-| PoseR (Recall) | 85.5% |
+| Precision | 63.2% |
+| mAP@0.5 | 99.5% |
+| Recall | 85.5% |
 
-The dog class showed the most variation in results due to high intra-class variability — dogs appear in more diverse poses, sizes, and fur patterns compared to other classes. Despite this, mAP@0.5 remained at 99.5%.
+The dog class showed the most variation due to high intra-class variability — dogs appear in more diverse poses, sizes, and fur patterns compared to other classes. Despite this, mAP@0.5 remained at 99.5%.
+
+### Training Curves
+![Training Results](results/results.png)
+
+### Confusion Matrix (Normalized)
+![Confusion Matrix](results/confusion_matrix_normalized.png)
+
+### Precision-Recall Curve
+![PR Curve](results/PR_curve.png)
+
+---
+
+## 🖼️ Training Data
+
+Sample images from the training batches — diverse dog breeds, poses, and environments:
+
+![Training Batch](results/train_batch0.jpg)
+
+![Training Batch](results/train_batch1.jpg)
+
+---
+
+## ✅ Validation — Labels vs Predictions
+
+Ground truth labels (left) compared to model predictions (right):
+
+**Batch 0**
+![Val Labels](results/val_batch0_labels.jpg)
+![Val Predictions](results/val_batch0_pred.jpg)
+
+**Batch 1**
+![Val Labels](results/val_batch1_labels.jpg)
+![Val Predictions](results/val_batch1_pred.jpg)
 
 ---
 
@@ -59,18 +91,11 @@ The dog class showed the most variation in results due to high intra-class varia
 ## 📁 Repo Structure
 
 ```
-├── results/          # Training graphs, confusion matrix, PR curves
+├── results/          # Training graphs, confusion matrix, PR curves, batch previews
 ├── training/         # Colab training script, args.yaml, data.yaml
 ├── weights/          # Trained model weights (.pt)
 └── README.md
 ```
-
----
-
-## 🗂️ Dataset
-
-The full dataset (images, videos, CVAT annotations) is available on Google Drive:  
-📁 [Dataset — Google Drive](https://drive.google.com/drive/folders/1DkIQBkmlxgirXiz68SHCVaYJlQ6D62vG?usp=sharing)
 
 ---
 
