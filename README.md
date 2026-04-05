@@ -81,10 +81,10 @@ Ground truth labels (left) compared to model predictions (right):
 
 ## 🛠️ Stack
 
-- **YOLO (Ultralytics)** — object detection and pose estimation
-- **CVAT** — keypoint annotation with custom skeleton
-- **Google Colab** — model training
-- **Python** — data pipeline and inference
+- **YOLO (Ultralytics)** - object detection and pose estimation
+- **CVAT** - keypoint annotation with custom skeleton
+- **Google Colab** - model training
+- **Python** - data pipeline and inference
 
 ---
 
