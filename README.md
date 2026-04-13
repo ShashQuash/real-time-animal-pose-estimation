@@ -42,7 +42,7 @@ The system detects body keypoints across four animal classes in real time using 
 | mAP@0.5 | 99.5% |
 | Recall | 85.5% |
 
-The dog class showed the most variation due to high intra-class variability — dogs appear in more diverse poses, sizes, and fur patterns compared to other classes. Despite this, mAP@0.5 remained at 99.5%.
+The dog class showed the most variation due to high intra-class variability — dogs appear in more diverse poses, sizes, and fur patterns compared to other classes. Despite this, mAP@0.5 reached 99.5%.
 
 ### Training Curves
 ![Training Results](results/results.png)
@@ -60,7 +60,6 @@ The dog class showed the most variation due to high intra-class variability — 
 Sample images from the training batches — diverse dog breeds, poses, and environments:
 
 ![Training Batch](results/train_batch0.jpg)
-
 ![Training Batch](results/train_batch1.jpg)
 
 ---
