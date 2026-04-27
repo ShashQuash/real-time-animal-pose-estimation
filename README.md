@@ -10,13 +10,11 @@ A collaborative research project on real-time animal pose estimation using YOLO,
 
 Md Roman Bhuiyan · Barbaros Yesilova · Anastasia Shadakh · **Shrish Arunesh** · Giulio Napolitano · Md Baharul Islam · Junaidi Abdullah
 
-Berlin School of Business and Innovation (BSBI), Berlin, Germany — in collaboration with Multimedia University (MMU), Malaysia
-
 ---
 
 ## 📌 Project Overview
 
-The system detects body keypoints across four animal classes in real time using a fine-tuned YOLO model trained on a custom annotated dataset. Each team member was responsible for one animal class — from data collection through to training and testing.
+The system detects body keypoints across four animal classes in real time using a fine-tuned YOLO model trained on a custom annotated dataset. Each team member was responsible for one animal class from data collection through to training and testing.
 
 **Animal classes:** Chicken · Cow · Dog · Horse
 
@@ -42,7 +40,7 @@ The system detects body keypoints across four animal classes in real time using 
 | mAP@0.5 | 99.5% |
 | Recall | 85.5% |
 
-The dog class showed the most variation due to high intra-class variability — dogs appear in more diverse poses, sizes, and fur patterns compared to other classes. Despite this, mAP@0.5 reached 99.5%.
+The dog class showed the most variation due to high intra-class variability dogs appear in more diverse poses, sizes, and fur patterns compared to other classes. Despite this, mAP@0.5 reached 99.5%.
 
 ### Training Curves
 ![Training Results](results/results.png)
